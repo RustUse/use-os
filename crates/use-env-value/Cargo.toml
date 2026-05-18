@@ -1,0 +1,24 @@
+[package]
+name = "use-env-value"
+description = "Primitive environment variable value and pair vocabulary for RustUse"
+publish = true
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-env-value"
+keywords = ["environment", "env", "value", "pair", "rustuse"]
+categories = ["os", "data-structures"]
+
+[dependencies]
+use-env-key.workspace = true
+
+[package.metadata.docs.rs]
+all-features = true
+
+[lints]
+workspace = true

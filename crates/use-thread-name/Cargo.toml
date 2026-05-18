@@ -1,0 +1,21 @@
+[package]
+name = "use-thread-name"
+description = "Primitive thread name and count vocabulary for RustUse"
+publish = true
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-thread-name"
+keywords = ["thread", "name", "count", "os", "rustuse"]
+categories = ["os", "data-structures"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[lints]
+workspace = true

@@ -1,0 +1,21 @@
+[package]
+name = "use-architecture"
+description = "Primitive CPU and target architecture vocabulary for RustUse"
+publish = true
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-architecture"
+keywords = ["architecture", "target", "cpu", "wasm", "rustuse"]
+categories = ["os", "data-structures"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[lints]
+workspace = true

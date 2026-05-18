@@ -1,0 +1,32 @@
+[package]
+name = "use-os"
+description = "Facade crate for primitive RustUse OS-facing vocabulary"
+publish = true
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-os"
+keywords = ["os", "platform", "process", "thread", "rustuse"]
+categories = ["os", "data-structures"]
+
+[dependencies]
+use-architecture.workspace = true
+use-env-key.workspace = true
+use-env-value.workspace = true
+use-os-family.workspace = true
+use-platform.workspace = true
+use-process-id.workspace = true
+use-process-status.workspace = true
+use-thread-id.workspace = true
+use-thread-name.workspace = true
+
+[package.metadata.docs.rs]
+all-features = true
+
+[lints]
+workspace = true

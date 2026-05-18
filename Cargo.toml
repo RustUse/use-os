@@ -1,0 +1,56 @@
+[workspace]
+members = [
+    "crates/use-os",
+    "crates/use-platform",
+    "crates/use-os-family",
+    "crates/use-architecture",
+    "crates/use-process-id",
+    "crates/use-process-status",
+    "crates/use-thread-id",
+    "crates/use-thread-name",
+    "crates/use-env-key",
+    "crates/use-env-value",
+]
+resolver = "3"
+
+[workspace.package]
+authors = ["RustUse Contributors"]
+edition = "2024"
+homepage = "https://rustuse.org"
+license = "MIT OR Apache-2.0"
+publish = false
+readme = "README.md"
+repository = "https://github.com/RustUse/use-os"
+rust-version = "1.95.0"
+version = "0.1.0"
+
+[workspace.dependencies]
+use-architecture = { version = "0.1.0", path = "crates/use-architecture" }
+use-env-key = { version = "0.1.0", path = "crates/use-env-key" }
+use-env-value = { version = "0.1.0", path = "crates/use-env-value" }
+use-os = { version = "0.1.0", path = "crates/use-os" }
+use-os-family = { version = "0.1.0", path = "crates/use-os-family" }
+use-platform = { version = "0.1.0", path = "crates/use-platform" }
+use-process-id = { version = "0.1.0", path = "crates/use-process-id" }
+use-process-status = { version = "0.1.0", path = "crates/use-process-status" }
+use-thread-id = { version = "0.1.0", path = "crates/use-thread-id" }
+use-thread-name = { version = "0.1.0", path = "crates/use-thread-name" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.metadata.rustuse.release]
+publish = false
+versioning = "lockstep-0.x"
+first-publish-candidates = [
+    "use-platform",
+    "use-os-family",
+    "use-architecture",
+    "use-process-id",
+    "use-thread-id",
+    "use-thread-name",
+    "use-env-key",
+    "use-process-status",
+    "use-env-value",
+    "use-os",
+]
