@@ -30,7 +30,7 @@ jobs:
               use-platform use-os-family use-architecture use-process-id use-thread-id use-thread-name use-env-key use-process-status use-env-value use-os
         steps:
             - name: Check out repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v6
               with:
                   fetch-depth: 0
                   persist-credentials: false
