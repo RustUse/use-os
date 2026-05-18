@@ -1,0 +1,87 @@
+[workspace]
+release = false
+release_always = false
+changelog_update = false
+pr_labels = ["release"]
+max_analyze_commits = 2000
+
+[[package]]
+name = "use-platform"
+release = true
+version_group = "rustuse-os"
+
+[[package]]
+name = "use-os-family"
+release = true
+version_group = "rustuse-os"
+
+[[package]]
+name = "use-architecture"
+release = true
+version_group = "rustuse-os"
+
+[[package]]
+name = "use-process-id"
+release = true
+version_group = "rustuse-os"
+
+[[package]]
+name = "use-thread-id"
+release = true
+version_group = "rustuse-os"
+
+[[package]]
+name = "use-thread-name"
+release = true
+version_group = "rustuse-os"
+
+[[package]]
+name = "use-env-key"
+release = true
+version_group = "rustuse-os"
+
+[[package]]
+name = "use-process-status"
+release = true
+version_group = "rustuse-os"
+
+[[package]]
+name = "use-env-value"
+release = true
+version_group = "rustuse-os"
+
+[[package]]
+name = "use-os"
+release = true
+version_group = "rustuse-os"
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+changelog_include = [
+  "use-platform",
+  "use-os-family",
+  "use-architecture",
+  "use-process-id",
+  "use-thread-id",
+  "use-thread-name",
+  "use-env-key",
+  "use-process-status",
+  "use-env-value",
+]
+
+[changelog]
+header = """# Changelog
+
+## Unreleased
+"""
+protect_breaking_commits = true
+sort_commits = "oldest"
+commit_parsers = [
+  { message = "^feat(?:\\([^)]+\\))?!?: .+", group = "Added" },
+  { message = "^fix(?:\\([^)]+\\))?!?: .+", group = "Fixed" },
+  { message = "^security(?:\\([^)]+\\))?!?: .+", group = "Security" },
+  { message = "^(?:refactor|perf|change)(?:\\([^)]+\\))?!?: .+", group = "Changed" },
+  { message = "^docs(?:\\([^)]+\\))?!?: .+", group = "Documentation" },
+  { message = "^(?:build|ci|chore|deps|test)(?:\\([^)]+\\))?!?: .+", group = "Tooling" },
+  { footer = "^changelog: ?ignore$", skip = true },
+  { message = "^.*", group = "Changed" },
+]
