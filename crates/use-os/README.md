@@ -1,6 +1,6 @@
 # use-os
 
-Facade crate for primitive RustUse OS-facing vocabulary.
+Facade crate for primitive `RustUse` OS-facing vocabulary.
 
 `use-os` re-exports the focused crates in this set behind short module names. It is not an operating-system abstraction framework, runtime, process runner, scheduler, thread pool, shell, task runner, CLI framework, or replacement for Rust `std`.
 

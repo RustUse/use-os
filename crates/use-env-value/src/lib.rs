@@ -63,7 +63,7 @@ pub struct EnvPair {
 impl EnvPair {
     /// Creates an environment key/value pair.
     #[must_use]
-    pub fn new(key: EnvKey, value: EnvValue) -> Self {
+    pub const fn new(key: EnvKey, value: EnvValue) -> Self {
         Self { key, value }
     }
 

@@ -83,7 +83,7 @@ pub struct Platform {
 impl Platform {
     /// Creates a platform from an already modeled platform triple.
     #[must_use]
-    pub fn new(triple: PlatformTriple) -> Self {
+    pub const fn new(triple: PlatformTriple) -> Self {
         Self { triple }
     }
 
